@@ -1,0 +1,29 @@
+{
+  "name": "Yahoo Groups Joiner",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Join all the (open) private Yahoo Groups",
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "cookies",
+    "*://*.groups.yahoo.com/neo/groups/*/info"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.groups.yahoo.com/neo/groups/*/info"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "src/popup/popup.html"
+  }
+}
