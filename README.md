@@ -10,7 +10,7 @@ Additionally, the files. photos, attachments, links, polls and calendars of all 
 
 ## The Solution
 
-Signing up to a group requires a CAPTCHA to be completed. There isn't a way to automatically join groups (for understandable reasons - think of the spam).
+Signing up to a group requires a reCaptcha to be completed. There isn't a way to automatically join groups (for understandable reasons - think of the spam).
 
 That means we need human volunteers to manually join as many groups as they can. And their efforts need to be coordinated.
 
