@@ -2,7 +2,7 @@
 
 ## The Problem
 
-Yahoo Groups is shutting down on December 14 2019, and is becoming read-only on October 28th.
+Yahoo Groups is shutting down on December 14 2019, and is becoming read-only on October 28 2019.
 
 To combat spam, many groups restricted what non-members could see. Many of these groups also allowed anyone to join with no approval from an admin. Since the content of these groups is non-public, it will be lost when Groups close.
 
