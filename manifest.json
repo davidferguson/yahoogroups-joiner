@@ -11,7 +11,9 @@
   },
   "permissions": [
     "cookies",
-    "*://*.groups.yahoo.com/neo/groups/*/info"
+    "storage",
+    "*://*.groups.yahoo.com/neo/groups/*/info",
+    "*://*.groups.yahoo.com/neo/search?query=*"
   ],
   "content_scripts": [
     {
@@ -20,6 +22,14 @@
       ],
       "js": [
         "src/inject/inject.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.groups.yahoo.com/neo/search?query=*"
+      ],
+      "js": [
+        "src/inject/search.js"
       ]
     }
   ],
