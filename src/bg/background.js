@@ -1,5 +1,13 @@
 var SERVER_URL = 'http://df58.host.cs.st-andrews.ac.uk/yahoogroups/'
 var YAHOO_URL = 'https://groups.yahoo.com/neo/groups/<GROUP>/info'
+var YAHOO_SEARCH_URL = 'https://groups.yahoo.com/neo/search?query=<GROUP>'
+
+// on install, set enabled to false
+chrome.runtime.onInstalled.addListener(function (details) {
+	if (details.reason === 'install') {
+		chrome.storage.sync.set({ enabled: 0 })
+	}
+})
 
 // request a group, and go to it
 function requestGroup (cb) {
@@ -27,8 +35,7 @@ function requestGroup (cb) {
       }
 
       // build up URL
-      var groupUrl = YAHOO_URL.replace('<GROUP>', group)
-      //chrome.tabs.create({ url: groupUrl })
+      var groupUrl = YAHOO_SEARCH_URL.replace('<GROUP>', group)
       cb(groupUrl)
     }
   }
