@@ -1,4 +1,4 @@
-var SERVER_URL = 'http://df58.host.cs.st-andrews.ac.uk/yahoogroups/'
+var SERVER_URL = 'https://df58.host.cs.st-andrews.ac.uk/yahoogroups/'
 var YAHOO_URL = 'https://groups.yahoo.com/neo/groups/<GROUP>/info'
 var YAHOO_SEARCH_URL = 'https://groups.yahoo.com/neo/search?query=<GROUP>'
 
