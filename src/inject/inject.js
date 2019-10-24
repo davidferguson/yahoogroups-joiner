@@ -29,7 +29,8 @@ function run () {
 		// group is joined, send the message
 		chrome.extension.sendMessage({
 			type: 'joined',
-			group: groupName
+			group: groupName,
+			email: document.getElementById('yucs-meta').getAttribute('data-userid')
 		}, function(response) {
 	    // don't care about a response
 		})
