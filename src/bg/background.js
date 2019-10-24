@@ -62,7 +62,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   // handler for group archived
   if (request.type === 'joined') {
     var group = request.group
-    var getUrl = SERVER_URL + 'joined/' + encodeURIComponent(group) + '/'
+		var email = request.email
+    //var getUrl = SERVER_URL + 'joined/' + encodeURIComponent(group) + '/'
+		var getUrl = SERVER_URL + 'joined2/' + encodeURIComponent(group) + '/' + encodeURIComponent(email) + '/'
     var request = new XMLHttpRequest()
     request.onreadystatechange = function () {
       if (this.readyState === 4) {
