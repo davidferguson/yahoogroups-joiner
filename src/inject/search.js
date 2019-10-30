@@ -12,13 +12,28 @@ function run () {
   }
 
   var requiredGroup = urlParams.get('query')
+  var found = false;
 
   // highlight the group red in the list
   var groupElementsCollection = document.getElementsByClassName('yg-grp-row')
   for (var i = 0; i < groupElementsCollection.length; i++) {
     var gname = groupElementsCollection[i].getAttribute('data-gname').toLowerCase()
     if (gname === requiredGroup.toLowerCase()) {
-      return groupElementsCollection[i].style.border = '5px solid red'
+      groupElementsCollection[i].style.border = '5px solid red';
+      found = true;
+      break;
     }
   }
+
+  if (found) return;
+
+  // include a direct link for groups hidden from the directory
+  var groupList = document.querySelector('#yg-srp-list > ul');
+  var li = document.createElement('li')
+  li.textContent = "Couldn't find group in directory--click here in case it's just hidden.";
+  li.style.fontWeight = 'bold';
+  li.style.color = 'red';
+  li.style.cursor = 'pointer';
+  li.onclick = function() { window.open('groups/' + requiredGroup + '/info'); };
+  groupList.insertBefore(li, groupList.firstChild);
 }
