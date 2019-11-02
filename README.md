@@ -1,20 +1,20 @@
 # Human-Assisted Archival of Yahoo Groups
 
-## The Problem
+### tl;dr - we (ArchiveTeam) need help to save as much of Yahoo Groups as possible. Link at bottom of post.
 
-Yahoo Groups is shutting down on December 14 2019, and is becoming read-only on October 28 2019.
+Yahoo is deleting the archives of all Yahoo Group’s on December 14 2019.
 
-To combat spam, many groups restricted what non-members could see. Many of these groups also allowed anyone to join with no approval from an admin. Since the content of these groups is non-public, it will be lost when Groups closes.
+The files, photos, attachments, links, polls and calendars of all groups are only visible to group members. This content is outside the scope of a typical ArchiveTeam grab, and unless action is taken will be lost on December 14.
 
-Additionally, the files, photos, attachments, links, polls and calendars of all groups are only visible to members, meaning they too will be lost when Groups closes.
+Additionally, to combat spam, many groups restricted what content non-members could see. Many of these groups also allowed anyone to join with no approval from an admin. Since all the content of these groups is restricted, it will not be preserved (again, unless action is taken).
 
-## The Solution
+Signing up to a group requires a reCaptcha to be completed. There isn't a way to automatically join groups (for understandable reasons - groups would have been overrun with spam… well, more than they were).
 
-Signing up to a group requires a reCaptcha to be completed. There isn't a way to automatically join groups (for understandable reasons - think of the spam).
+### We need volunteers to manually join as many groups as they can, by filling out reCaptchas.
 
-That means we need human volunteers to manually join as many groups as they can. And their efforts need to be coordinated.
+We’ve written a Chrome extension that links to a tracker to coordinate efforts. If you’re up for completing a bunch of reCaptcha’s for us, you could really make a difference!
 
-That's the point of this extension: to simplify and coordinate signing up to at-risk groups.
+See the instructions below on how to help.
 
 ## How Can I Help / Use This?
 
