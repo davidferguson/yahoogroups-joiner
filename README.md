@@ -23,7 +23,11 @@ See the instructions below on how to help.
 1. You'll need a computer with Google Chrome installed and sufficient privileges to install "unpacked" Chrome extensions.
 2. Make a new temporary email address to use as a basis for the Yahoo account using [Guerrilla Mail](http://guerrillamail.com/). (Using Guerrilla Mail is very important. Other providers won't work.) Uncheck the *scramble address* option and make it non-obvious, so it isn't used by another Guerrilla Mail user. (Unscrambled addresses are required because it gives an alphanumerical address - no odd characters like `+` or `=`. Yahoo isn't good at working with these sorts of addresses.)
 3. Make a [new Yahoo account](https://login.yahoo.com/account/create) to be used for the archiving. Don't put in any personal information as you'll be giving control of this account to Archive Team. Select the option *I want to use my current email address* and give the Guerrilla Mail address you've just made so you won't need to provide a phone number.
-4. On the `#yahoosucks` channel on [ArchiveTeam IRC (EFNet)](https://www.archiveteam.org/index.php?title=Archiveteam:IRC), PM the email and password of the newly created Yahoo account to the user `betamax`. I'm not always checking PMs, but I should be online. (If I'm not, PM the details to another channel op in `#yahoosucks`). Or if you use Discord over IRC, you can DM the account detains to `tapedrive#8283`.
+4. You now need to tell us the username and password for your account. There are several ways to do this:
+    - PM the user `betamax` or `tapedrive` on [efnet IRC](https://www.archiveteam.org/index.php?title=Archiveteam:IRC). (You may also want to checkout the `#yahoosucks` channel, which is what ArchiveTeam use for discussing current progress.
+    - If you use Discord, you can DM the account detains to `tapedrive#8283`.
+    - If you have a reddit account, PM the account details to [/u/fanficarchive/](https://reddit.com/user/fanficarchive)
+    - Otherwise, you can email them to me at `fergusondavid6@gmail.com`
 
 ### Setup and Installation
 
