@@ -21,9 +21,8 @@ See the instructions below on how to help.
 ### Prerequisites, or 'Before You Begin'
 
 1. You'll need a computer with Google Chrome installed and sufficient privileges to install "unpacked" Chrome extensions.
-2. Make a new temporary email address to use as a basis for the Yahoo account using [Guerrilla Mail](http://guerrillamail.com/). (Using Guerrilla Mail is very important. Other providers won't work.) Uncheck the *scramble address* option and make it non-obvious, so it isn't used by another Guerrilla Mail user. (Unscrambled addresses are required because it gives an alphanumerical address - no odd characters like `+` or `=`. Yahoo isn't good at working with these sorts of addresses.)
-3. Make a [new Yahoo account](https://login.yahoo.com/account/create) to be used for the archiving. Don't put in any personal information as you'll be giving control of this account to Archive Team. Select the option *I want to use my current email address* and give the Guerrilla Mail address you've just made so you won't need to provide a phone number.
-4. You now need to tell us the username and password for your account. Please submit it using [this google form](https://forms.gle/K3qrnvfzH3aYiGYY8)
+2. Make a [new Yahoo account](https://login.yahoo.com/account/create) to be used for the archiving. Don't put in any personal information as you'll be giving control of this account to Archive Team. Please avoid using temporary email providers for the email - we lost access to over 55,000 groups when Yahoo detected this and banned our accounts. GMail, Outlook or Yahoo emails seem to work fine, or you can create a new Yahoo Mail when making the account (although this needs phone verification).
+3. You now need to tell us the username and password for your account. Please submit it using [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdh6wxiTbpmoMY-RIFXHPo3XV8gR8VqFS6tz4hhRcnpMR6esA/viewform?usp=sf_link)
 
 ### Setup and Installation
 
