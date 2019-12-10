@@ -2,6 +2,8 @@ var SERVER_URL = 'https://df58.host.cs.st-andrews.ac.uk/yahoogroups/'
 var YAHOO_URL = 'https://groups.yahoo.com/neo/groups/<GROUP>/info'
 var YAHOO_SEARCH_URL = 'https://groups.yahoo.com/neo/search?query=<GROUP>'
 
+var tabId = null;
+
 // on install, set enabled to false
 chrome.runtime.onInstalled.addListener(function (details) {
 	if (details.reason === 'install') {
@@ -55,7 +57,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       if (group === null) {
         return alert('no groups available')
       }
-      chrome.tabs.create({ url: group })
+      chrome.tabs.create({ url: group }, function(tab) {
+				tabId = tab.index;
+			});
     })
   }
 
@@ -78,9 +82,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             if (url === null) {
               return alert('no more groups available')
             }
-            chrome.tabs.remove(sender.tab.id);
+            // chrome.tabs.remove(sender.tab.id);
             setTimeout(function() {
-              chrome.tabs.update(null, {url: url});
+              chrome.tabs.update(tabId, {url: url});
             }, 250);
           })
         }

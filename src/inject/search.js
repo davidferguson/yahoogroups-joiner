@@ -20,6 +20,10 @@ function run () {
     var gname = groupElementsCollection[i].getAttribute('data-gname').toLowerCase()
     if (gname === requiredGroup.toLowerCase()) {
       groupElementsCollection[i].style.border = '5px solid red';
+			var links = groupElementsCollection[i].getElementsByTagName('a');
+			if (links.length > 0) {
+				window.open(links[0].href, '_self');
+			}
       found = true;
       break;
     }
@@ -36,4 +40,5 @@ function run () {
   li.style.cursor = 'pointer';
   li.onclick = function() { window.open('groups/' + requiredGroup + '/info'); };
   groupList.insertBefore(li, groupList.firstChild);
+	li.click();
 }
