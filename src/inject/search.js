@@ -22,7 +22,9 @@ function run () {
       groupElementsCollection[i].style.border = '5px solid red';
 			var links = groupElementsCollection[i].getElementsByTagName('a');
 			if (links.length > 0) {
-				window.open(links[0].href, '_self');
+				setTimeout(function() {
+					window.open(links[0].href, '_self');
+				}, 250);
 			}
       found = true;
       break;
@@ -40,5 +42,7 @@ function run () {
   li.style.cursor = 'pointer';
   li.onclick = function() { window.open('groups/' + requiredGroup + '/info'); };
   groupList.insertBefore(li, groupList.firstChild);
-	li.click();
+	setTimeout(function() {
+		li.click();
+	}, 250);
 }
