@@ -35,13 +35,13 @@ See the instructions below on how to help.
 ### Using the Extension
 
 1. In Chrome's extension icons list in the top-right of the browser bar, click on the `Y`, ensure that the *Enabled* checkbox is ticked, then click *Start*.
-2. A tab will be opened with a Yahoo Groups *search results* page. There should be a group highlighted with a red border. Click on that group (it'll open in a new tab).
+2. A tab will be opened with a Yahoo Groups *search results* page. There should be a group highlighted with a red border. The extension will automatically start loading this group (though it might take a while with Yahoo's slow servers).
 3. Click the purple **+ Join Group** button in the centre-top right of the group page. (For foreign groups the name won't be *Join Group*, but it's the only purple button in that location).
 4. You'll get a pop-up with some default info already entered. **Do not change any of the information in this pop-up.**
 5. There will be a Google *I am not a robot* checkbox CAPTCHA in the pop-up. Complete it by clicking it and (most likely) identifying cars, buses, palm trees, or whatever else takes Google's fancy.
 6. Click the purple **Send Request** button at the bottom of the pop-up.
 7. The pop-up will close and the page will refresh to show the group homepage as seen by members. Congratulations - you've now joined the group and it'll most likely be saved. (Barring issues on our end, but that's our fault).
-8. Almost immediately the new tab will close and you'll be taken to another *search results* page. Proceed to step 2.
+8. Almost immediately, another *search results* page will start loading. Proceed to step 2.
 9. When you've had enough, click the `Y` in the top-right of the browser bar and uncheck the *Enabled* checkbox. Close the browser window.
 
 ### Private Groups
