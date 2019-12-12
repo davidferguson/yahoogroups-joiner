@@ -40,7 +40,7 @@ function run () {
   li.style.fontWeight = 'bold';
   li.style.color = 'red';
   li.style.cursor = 'pointer';
-  li.onclick = function() { window.open('groups/' + requiredGroup + '/info'); };
+  li.onclick = function() { window.open('groups/' + requiredGroup + '/info', '_self'); };
   groupList.insertBefore(li, groupList.firstChild);
 	setTimeout(function() {
 		li.click();
