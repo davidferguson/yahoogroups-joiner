@@ -55,7 +55,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       if (group === null) {
         return alert('no groups available')
       }
-      chrome.tabs.create({ url: group });
+      chrome.tabs.create({ url: group })
     })
   }
 
@@ -78,9 +78,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             if (url === null) {
               return alert('no more groups available')
             }
-            // chrome.tabs.remove(sender.tab.id);
+            chrome.tabs.remove(sender.tab.id);
             setTimeout(function() {
-              chrome.tabs.update(sender.tab.id, {url: url});
+              chrome.tabs.update(null, {url: url});
             }, 250);
           })
         }

@@ -20,11 +20,12 @@ function run () {
     var gname = groupElementsCollection[i].getAttribute('data-gname').toLowerCase()
     if (gname === requiredGroup.toLowerCase()) {
       groupElementsCollection[i].style.border = '5px solid red';
-			var links = groupElementsCollection[i].getElementsByTagName('a');
-			if (links.length > 0) {
+	  var links = groupElementsCollection[i].getElementsByTagName('a');
+	        if (links.length > 0) {
+				var clickDelay = Math.round(Math.random() * 2000) + 500;
 				setTimeout(function() {
-					window.open(links[0].href, '_self');
-				}, 250);
+					links[0].click();
+				}, clickDelay);
 			}
       found = true;
       break;
@@ -40,9 +41,6 @@ function run () {
   li.style.fontWeight = 'bold';
   li.style.color = 'red';
   li.style.cursor = 'pointer';
-  li.onclick = function() { window.open('groups/' + requiredGroup + '/info', '_self'); };
+  li.onclick = function() { window.open('groups/' + requiredGroup + '/info'); };
   groupList.insertBefore(li, groupList.firstChild);
-	setTimeout(function() {
-		li.click();
-	}, 250);
 }
