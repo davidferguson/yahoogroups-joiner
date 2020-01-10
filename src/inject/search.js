@@ -13,6 +13,7 @@ function run () {
 
   var requiredGroup = urlParams.get('query')
   var found = false;
+  var clickDelay;
 
   // highlight the group red in the list
   var groupElementsCollection = document.getElementsByClassName('yg-grp-row')
@@ -22,7 +23,7 @@ function run () {
       groupElementsCollection[i].style.border = '5px solid red';
 	  var links = groupElementsCollection[i].getElementsByTagName('a');
 	        if (links.length > 0) {
-				var clickDelay = Math.round(Math.random() * 2000) + 500;
+				clickDelay = Math.round(Math.random() * 2000) + 500;
 				setTimeout(function() {
 					links[0].click();
 				}, clickDelay);
@@ -43,4 +44,9 @@ function run () {
   li.style.cursor = 'pointer';
   li.onclick = function() { window.open('groups/' + requiredGroup + '/info'); };
   groupList.insertBefore(li, groupList.firstChild);
+  
+  clickDelay = Math.round(Math.random() * 2000) + 500;
+  setTimeout(function() {
+	li.click();
+  }, clickDelay);
 }
