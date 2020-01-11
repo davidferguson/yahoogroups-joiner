@@ -35,16 +35,20 @@ function run () {
 
   if (found) return;
 
-  // include a direct link for groups hidden from the directory
-  var groupList = document.querySelector('#yg-srp-list > ul');
+
   
   // If there is no group list, it means the search results didn't load properly.
   // Refresh and try again.
-  if (!!groupList) {
-	  location.reload(true);
-	  return;
-  }
+  var queryError = document.getElementsByClassName("yg-inline-err-msg");
+  if (queryError.length > 0) {
+	//if (queryError[0].innerText.trim() !== "") {						
+		location.reload(true);
+		return;
+		//}
+	}
   
+    // include a direct link for groups hidden from the directory
+  var groupList = document.querySelector('#yg-srp-list > ul');
   var li = document.createElement('li')
   li.textContent = "Couldn't find group in directory--click here in case it's just hidden.";
   li.style.fontWeight = 'bold';
