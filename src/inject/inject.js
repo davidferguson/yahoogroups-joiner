@@ -11,7 +11,6 @@ function run () {
 	var groupName = match[1]
 
 	var joinButton = document.getElementById('yg-join-group')
-	var clickedJoin = false;
 	var loadDate = new Date();
 	var loadTime = loadDate.getTime();
 	
@@ -23,7 +22,6 @@ function run () {
 		// It's been over 5 minutes since we started trying to join the group.
 		// Refresh and try again.
 		if (currentTime - loadTime > 600000) {
-			clickedJoin = false;
 			loadDate = new Date();
 			loadTime = loadDate.getTime();
 			location.reload(true)
@@ -34,17 +32,22 @@ function run () {
 		// group hasn't been joined, start an interval looking for the error message
 		var errorMessageInterval = setInterval(function () {
 			
-			// Look for the Send Request button that pops up after clicking Join Group.
-			var sendRequestButton = document.getElementById('send_request')
+
 			
-			// If there is no button, click Join Group after a random delay.
-			if (!sendRequestButton) {
+			// Look for the panel that pops up after clicking Join Group.
+			var panelVisible = false;
+			var joinPanel = document.getElementById('yg-join-group-panel');
+			if (!!joinPanel){
+				if (window.getComputedStyle(joinPanel).display !== "none"){
+					panelVisible = true;
+				}
+			}
+			
+			// If the panel isn't visible, click Join Group after a random delay.
+			if (!panelVisible) {
 				var joinDelay = Math.round(Math.random() * 2000) + 500;
 				var joiningTimeout = setTimeout(function () {
-					if (!clickedJoin) {
-						joinButton.click();
-						clickedJoin = true;
-					}
+					joinButton.click();
 				}, joinDelay)
 			}
 			
@@ -54,23 +57,56 @@ function run () {
 				commentBox.value = "Archive Team is creating a public archive of Yahoo Groups before Yahoo permanently deletes their data after January 31. May we archive your group, please?";
 			}
 			
-			// If Send Request is enabled (meaning the captcha has been solved correctly), click it.			
+			// If Send Request is enabled (meaning the captcha has been solved correctly), click it.	
+			var sendRequestButton = document.getElementById('send_request')			
 			if (!!sendRequestButton) {
 				if (!sendRequestButton.disabled) {
 					sendRequestButton.click();
 				}
 			}
 			
-			var yahoosucks = document.getElementById('err-msg-comment')
-			if (yahoosucks && yahoosucks.innerText.trim() !== "") {
-				// if we see the error message, clear the interval and reload the page
+			// Check if anti-captcha is displaying an error message.
+			var anticaptchasucks = false;
+			if (panelVisible) {		
+				var errorNode = document.getElementsByClassName("captcha-error-node");
+				if (errorNode.length > 0) {
+					if (errorNode[0].innerText.trim() !== "") {						
+						anticaptchasucks = true;
+					}
+				}
+				
+				var errorNode2 = document.getElementsByClassName("antigate_solver recaptcha error");
+				if (errorNode2.length > 0) {
+					if (errorNode2[0].innerText.trim() !== "") {						
+						anticaptchasucks = true;
+					}
+				}
+			}
+			
+			// Check if Yahoo is displaying an "error loading content" message. It's usually hidden.
+			var yahoosucks = false;
+			var loadingError = document.getElementById('yg-error-container');
+			if (!!loadingError){
+				if (!loadingError.classList.contains('hide')) {
+					yahoosucks = true;
+				}
+			}
+			
+			var errMsg = document.getElementById('err-msg-comment');
+			if (!!errMsg){
+				if (errMsg.innerText.trim() !== "") {						
+						yahoosucks = true;
+					}
+			}
+			
+			// If there is an error, clear the interval and reload the page.
+			if (yahoosucks || anticaptchasucks) {
 				clearInterval(errorMessageInterval)
-				clickedJoin = false;
 				loadDate = new Date();
 				loadTime = loadDate.getTime();
 				location.reload(true)
 			}
-		}, 500)
+		}, 5000)
 	}
 
 	// group is joined
