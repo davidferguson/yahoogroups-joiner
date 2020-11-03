@@ -1,5 +1,9 @@
 # Human-Assisted Archival of Yahoo Groups
 
+### Yahoo Groups closed their public interface in December 2019. Thanks to the help of many volunteers, tens of thousands of groups were saved. Thank you! The following is left as an archive of the project.
+
+----
+
 ### tl;dr - we (ArchiveTeam) need help to save as much of Yahoo Groups as possible. Link at bottom of post.
 
 Yahoo is deleting the archives of all Yahoo Group’s on December 14 2019.
